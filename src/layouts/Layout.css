@@ -2,59 +2,89 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Inter', sans-serif;
 }
 
 .main-header {
-    background-color: #1a1a1a;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: white;
+    padding: 1rem 3rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f4f6;
 }
 
 .branding {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: white;
+    gap: 0.75rem;
     text-decoration: none;
+    color: #1a1a1a;
 }
 
-.branding h1 {
-    margin: 0;
-    font-size: 1.5rem;
+.logo-icon {
+    background-color: #4f46e5;
+    /* The purple icon bg */
+    color: white;
+    padding: 0.35rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-text {
+    font-family: 'Inter', sans-serif;
+    /* The logo text in screenshot is sans-serif, unlike the hero */
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #111827;
+}
+
+.brand-accent {
+    color: #4f46e5;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #111827;
+}
+
+.user-actions {
+    color: #4b5563;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.user-actions:hover {
+    color: #111827;
 }
 
 .main-content {
     flex: 1;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    width: 100%;
-    padding: 2rem;
 }
 
 .main-footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 2rem;
     margin-top: auto;
-    color: #94a3b8;
-    /* slate-400 */
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
+    padding: 2rem;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    background-color: white;
+    border-top: 1px solid #f3f4f6;
 }
