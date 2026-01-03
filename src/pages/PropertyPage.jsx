@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
 import { fetchPropertyById } from '../services/propertyService';
 import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign, FaHeart } from 'react-icons/fa';
+import ImageGallery from '../components/ImageGallery';
+import PropertyTabs from '../components/PropertyTabs';
+import { useFavourites } from '../context/FavouritesContext';
 import './PropertyPage.css';
 import '../index.css';
-import { useFavourites } from '../context/FavouritesContext';
 
 const PropertyPage = () => {
     const { id } = useParams();
     const [property, setProperty] = useState(undefined);
     const [loading, setLoading] = useState(true);
-    const [activeImage, setActiveImage] = useState('');
 
     useEffect(() => {
         const loadProperty = async () => {
@@ -20,9 +19,6 @@ const PropertyPage = () => {
                 setLoading(true);
                 const data = await fetchPropertyById(id);
                 setProperty(data);
-                if (data) {
-                    setActiveImage(data.picture);
-                }
                 setLoading(false);
             }
         };
@@ -42,10 +38,10 @@ const PropertyPage = () => {
                 <FaArrowLeft /> Back to Search
             </Link>
 
-            <div className="property-header">
+            <div className="property-header-section">
                 <div className="header-left">
                     <h1>{property.location} - {property.type}</h1>
-                    <div className="property-price">
+                    <div className="property-price-tag">
                         <FaPoundSign /> {property.price.toLocaleString()}
                     </div>
                 </div>
@@ -58,20 +54,7 @@ const PropertyPage = () => {
             </div>
 
             <div className="gallery-section">
-                <div className="main-image-container">
-                    <img src={activeImage} alt={property.type} className="main-image" />
-                </div>
-                <div className="thumbnails-grid">
-                    {property.images.map((img, index) => (
-                        <img
-                            key={index}
-                            src={img}
-                            alt={`View ${index + 1}`}
-                            className={`thumbnail ${activeImage === img ? 'active' : ''}`}
-                            onClick={() => setActiveImage(img)}
-                        />
-                    ))}
-                </div>
+                <ImageGallery images={property.images} />
             </div>
 
             <div className="property-info-bar">
@@ -80,48 +63,13 @@ const PropertyPage = () => {
                 <span>Type: {property.type}</span>
             </div>
 
-            <div className="property-description">
+            <div className="property-description-section">
                 <h2>Description</h2>
                 <p>{property.description}</p>
             </div>
 
             <div className="tabs-section">
-                <Tabs>
-                    <TabList>
-                        <Tab>Description</Tab>
-                        <Tab>Floor Plan</Tab>
-                        <Tab>Map</Tab>
-                    </TabList>
-
-                    <TabPanel>
-                        <div className="tab-content">
-                            <h3>About this property</h3>
-                            <p>{property.longDescription}</p>
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div className="tab-content">
-                            <h3>Floor Plan</h3>
-                            <img src={property.floorPlan} alt="Floor Plan" className="floorplan-image" />
-                        </div>
-                    </TabPanel>
-                    <TabPanel>
-                        <div className="tab-content">
-                            <h3>Location</h3>
-                            <div className="map-container">
-                                <iframe
-                                    title="Property Location"
-                                    src={property.mapEmbedUrl}
-                                    width="100%"
-                                    height="450"
-                                    style={{ border: 0 }}
-                                    allowFullScreen={true}
-                                    loading="lazy"
-                                ></iframe>
-                            </div>
-                        </div>
-                    </TabPanel>
-                </Tabs>
+                <PropertyTabs property={property} />
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './PropertyTabs.css';
 
 const PropertyTabs = ({ property }) => {
   const [activeTab, setActiveTab] = useState('desc');
@@ -10,57 +11,51 @@ const PropertyTabs = ({ property }) => {
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-      <div className="flex border-b border-slate-200 overflow-x-auto">
+    <div className="tabs-container">
+      <div className="tabs-header">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-6 py-4 text-sm font-medium transition-colors whitespace-nowrap ${
-              activeTab === tab.id
-                ? 'border-b-2 border-indigo-600 text-indigo-600'
-                : 'text-slate-500 hover:text-indigo-600 hover:bg-slate-50'
-            }`}
+            className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
           >
             {tab.label}
           </button>
         ))}
       </div>
 
-      <div className="p-6">
+      <div className="tab-content">
         {activeTab === 'desc' && (
-          <div className="prose prose-indigo max-w-none">
-            <p className="text-slate-700 leading-relaxed">
+          <div className="tab-prose">
+            <p>
               {property.longDescription}
             </p>
           </div>
         )}
 
         {activeTab === 'floor' && (
-          <div className="flex justify-center">
+          <div className="floor-plan-container">
             <img
-              src={property.floorPlanUrl}
+              src={property.floorPlan}
               alt="Floor Plan"
-              className="max-w-full h-auto rounded-lg border border-slate-100 shadow-sm"
+              className="floor-plan-image"
             />
           </div>
         )}
 
         {activeTab === 'map' && (
-          <div className="w-full h-[400px] bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center relative">
-             <iframe
-               title="Property Map"
-               width="100%"
-               height="100%"
-               frameBorder="0"
-               scrolling="no"
-               marginHeight={0}
-               marginWidth={0}
-               src={`https://maps.google.com/maps?q=${property.mapCoords.lat},${property.mapCoords.lng}&z=14&output=embed`}
-             ></iframe>
-             <div className="absolute top-2 right-2 bg-white px-2 py-1 rounded shadow text-xs font-bold text-indigo-600 pointer-events-none">
-               Map View
-             </div>
+          <div className="map-container">
+            <iframe
+              title="Property Map"
+              className="map-frame"
+              scrolling="no"
+              marginHeight={0}
+              marginWidth={0}
+              src={property.mapEmbedUrl}
+            ></iframe>
+            <div className="map-overlay">
+              Map View
+            </div>
           </div>
         )}
       </div>
