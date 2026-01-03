@@ -1,118 +1,123 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import { FaSearch } from 'react-icons/fa';
 import './SearchForm.css';
 
 const SearchForm = ({ criteria, setCriteria, onSearch }) => {
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCriteria((prev) => ({
-      ...prev,
-      [name]: value === '' ? undefined : (name.includes('Price') || name.includes('Bedrooms') ? Number(value) : value),
-    }));
+  const [localCriteria, setLocalCriteria] = useState(criteria);
+
+  // Update local state when inputs change
+  const handleChange = (field, value) => {
+    setLocalCriteria(prev => ({ ...prev, [field]: value }));
   };
 
-  const propertyTypes = ['House', 'Apartment', 'Flat', 'Bungalow'];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setCriteria(localCriteria); // Update parent state
+    onSearch(); // Trigger search
+  };
 
   return (
     <div className="search-form-container">
-      <div className="search-grid">
-        <div className="form-group">
-          <label className="form-label">Property Type</label>
-          <select
-            name="type"
-            value={criteria.type || ''}
-            onChange={handleChange}
-            className="form-control"
-          >
-            <option value="">Any Type</option>
-            {propertyTypes.map((type) => <option key={type} value={type}>{type}</option>)}
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Price Range (£)</label>
-          <div className="form-input-group">
-            <input
-              type="number"
-              name="minPrice"
-              placeholder="Min"
-              value={criteria.minPrice || ''}
-              onChange={handleChange}
-              className="form-control"
-            />
-            <input
-              type="number"
-              name="maxPrice"
-              placeholder="Max"
-              value={criteria.maxPrice || ''}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Bedrooms</label>
-          <div className="form-input-group">
-            <input
-              type="number"
-              name="minBedrooms"
-              placeholder="Min"
-              value={criteria.minBedrooms || ''}
-              onChange={handleChange}
-              className="form-control"
-            />
-            <input
-              type="number"
-              name="maxBedrooms"
-              placeholder="Max"
-              value={criteria.maxBedrooms || ''}
-              onChange={handleChange}
-              className="form-control"
-            />
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label className="form-label">Postcode Area</label>
-          <input
-            type="text"
-            name="postcode"
-            placeholder="e.g. NW3"
-            value={criteria.postcode || ''}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
+      <div className="search-title">
+        <FaSearch className="search-icon" />
+        <span>Search Criteria</span>
       </div>
 
-      <div className="search-grid-bottom">
-        <div className="form-group">
-          <label className="form-label">Date Added Range</label>
-          <div className="form-input-group">
-            <input
-              type="date"
-              name="dateFrom"
-              value={criteria.dateFrom || ''}
-              onChange={handleChange}
+      <form onSubmit={handleSubmit} className="form-grid">
+        <div className="form-row">
+          <div className="form-group">
+            <label>Property Type</label>
+            <select
+              value={localCriteria.type}
+              onChange={(e) => handleChange('type', e.target.value)}
               className="form-control"
-            />
+            >
+              <option value="any">Any Type</option>
+              <option value="House">House</option>
+              <option value="Flat">Flat</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Bungalow">Bungalow</option>
+            </select>
+          </div>
+
+          <div className="form-group" style={{ flex: 1.5 }}>
+            <label>Price Range (£)</label>
+            <div className="price-inputs">
+              <input
+                type="number"
+                placeholder="Min"
+                value={localCriteria.minPrice}
+                onChange={(e) => handleChange('minPrice', e.target.value)}
+                className="form-control"
+              />
+              <input
+                type="number"
+                placeholder="Max"
+                value={localCriteria.maxPrice}
+                onChange={(e) => handleChange('maxPrice', e.target.value)}
+                className="form-control"
+              />
+            </div>
+          </div>
+
+          <div className="form-group" style={{ flex: 1.5 }}>
+            <label>Bedrooms</label>
+            <div className="price-inputs">
+              <input
+                type="number"
+                placeholder="Min"
+                value={localCriteria.minBedrooms}
+                onChange={(e) => handleChange('minBedrooms', e.target.value)}
+                className="form-control"
+              />
+              <input
+                type="number"
+                placeholder="Max"
+                value={localCriteria.maxBedrooms}
+                onChange={(e) => handleChange('maxBedrooms', e.target.value)}
+                className="form-control"
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>Postcode Area</label>
             <input
-              type="date"
-              name="dateTo"
-              value={criteria.dateTo || ''}
-              onChange={handleChange}
+              type="text"
+              placeholder="e.g. NW3"
+              value={localCriteria.postcode}
+              onChange={(e) => handleChange('postcode', e.target.value)}
               className="form-control"
             />
           </div>
         </div>
 
-        <button
-          onClick={onSearch}
-          className="submit-button"
-        >
-          Find My Home
-        </button>
-      </div>
+        <div className="form-row" style={{ alignItems: 'flex-start' }}>
+          <div className="form-group" style={{ flex: 2 }}>
+            <label>Date Added Range</label>
+            <div className="date-range">
+              <DatePicker
+                selected={localCriteria.dateFrom ? new Date(localCriteria.dateFrom) : null}
+                onChange={(date) => handleChange('dateFrom', date)}
+                placeholderText="mm/dd/yyyy"
+                className="form-control"
+              />
+              <DatePicker
+                selected={localCriteria.dateTo ? new Date(localCriteria.dateTo) : null}
+                onChange={(date) => handleChange('dateTo', date)}
+                placeholderText="mm/dd/yyyy"
+                className="form-control"
+              />
+            </div>
+          </div>
+
+          <div className="form-group" style={{ flex: 2 }}>
+            <button type="submit" className="search-btn-large">Find My Home</button>
+          </div>
+        </div>
+      </form>
     </div>
   );
 };
