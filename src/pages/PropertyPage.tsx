@@ -4,9 +4,10 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { fetchPropertyById } from '../services/propertyService';
 import { Property } from '../types/Property';
-import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign } from 'react-icons/fa';
+import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign, FaHeart } from 'react-icons/fa';
 import './PropertyPage.css';
 import '../index.css';
+import { useFavourites } from '../context/FavouritesContext';
 
 const PropertyPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -29,8 +30,12 @@ const PropertyPage: React.FC = () => {
         loadProperty();
     }, [id]);
 
+    const { isFavourite, addToFavourites, removeFromFavourites } = useFavourites();
+
     if (loading) return <div className="loading">Loading details...</div>;
     if (!property) return <div className="error">Property not found</div>;
+
+    const isFav = property ? isFavourite(property.id) : false;
 
     return (
         <div className="property-details-container">
@@ -39,10 +44,18 @@ const PropertyPage: React.FC = () => {
             </Link>
 
             <div className="property-header">
-                <h1>{property.location} - {property.type}</h1>
-                <div className="property-price">
-                    <FaPoundSign /> {property.price.toLocaleString()}
+                <div className="header-left">
+                    <h1>{property.location} - {property.type}</h1>
+                    <div className="property-price">
+                        <FaPoundSign /> {property.price.toLocaleString()}
+                    </div>
                 </div>
+                <button
+                    className={`fav-action-btn ${isFav ? 'active' : ''}`}
+                    onClick={() => property && (isFav ? removeFromFavourites(property.id) : addToFavourites(property))}
+                >
+                    <FaHeart /> {isFav ? 'Saved' : 'Save Property'}
+                </button>
             </div>
 
             <div className="gallery-section">

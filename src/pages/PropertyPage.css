@@ -1,3 +1,5 @@
+/* Existing styles... */
+
 .property-details-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -19,7 +21,7 @@
 .property-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 2rem;
     border-bottom: 1px solid #333;
     padding-bottom: 1rem;
@@ -28,6 +30,7 @@
 .property-header h1 {
     margin: 0;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .property-price {
@@ -36,6 +39,31 @@
     color: #646cff;
     display: flex;
     align-items: center;
+}
+
+.fav-action-btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.fav-action-btn:hover {
+    background-color: #444;
+    border-color: #777;
+}
+
+.fav-action-btn.active {
+    background-color: #ff6b6b;
+    border-color: #fa5252;
+    color: white;
 }
 
 .gallery-section {
@@ -94,4 +122,49 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.tabs-section {
+    margin-top: 2rem;
+}
+
+.react-tabs__tab-list {
+    border-bottom: 1px solid #444 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.react-tabs__tab {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 3px solid transparent !important;
+    color: #888 !important;
+    padding: 10px 20px !important;
+    font-size: 1.1rem;
+}
+
+.react-tabs__tab--selected {
+    color: white !important;
+    border-bottom-color: #646cff !important;
+}
+
+.react-tabs__tab:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.react-tabs__tab:after {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .property-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .property-info-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
