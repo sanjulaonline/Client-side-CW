@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import { fetchPropertyById } from '../services/propertyService';
 import { Property } from '../types/Property';
 import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign } from 'react-icons/fa';
@@ -71,11 +73,45 @@ const PropertyPage: React.FC = () => {
                 <p>{property.description}</p>
             </div>
 
-            {/* Tabs and Map will be added in Feature 7 */}
-            <div className="tabs-placeholder" style={{ marginTop: '2rem', padding: '1rem', border: '1px dashed #666' }}>
-                [Tabs for Long Description, Floor Plan, and Map will go here]
-            </div>
-        </div>
+            <div className="tabs-section">
+                <Tabs>
+                    <TabList>
+                        <Tab>Description</Tab>
+                        <Tab>Floor Plan</Tab>
+                        <Tab>Map</Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <div className="tab-content">
+                            <h3>About this property</h3>
+                            <p>{property.longDescription}</p>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="tab-content">
+                            <h3>Floor Plan</h3>
+                            <img src={property.floorPlan} alt="Floor Plan" className="floorplan-image" />
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="tab-content">
+                            <h3>Location</h3>
+                            <div className="map-container">
+                                <iframe
+                                    title="Property Location"
+                                    src={property.mapEmbedUrl}
+                                    width="100%"
+                                    height="450"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </TabPanel>
+                </Tabs>
+            </div>      </div>
+        </div >
     );
 };
 
