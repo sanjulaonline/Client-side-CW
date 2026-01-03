@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { fetchProperties, filterProperties } from '../services/propertyService';
-import { Property, SearchCriteria } from '../types/Property';
 import { Link } from 'react-router-dom';
 import { useFavourites } from '../context/FavouritesContext';
 import './SearchPage.css';
 
-const SearchPage: React.FC = () => {
-  const [properties, setProperties] = useState<Property[]>([]);
-  const [filteredProperties, setFilteredProperties] = useState<Property[]>([]);
+const SearchPage = () => {
+  const [properties, setProperties] = useState([]);
+  const [filteredProperties, setFilteredProperties] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // Search State
@@ -19,10 +18,10 @@ const SearchPage: React.FC = () => {
   const [minBedrooms, setMinBedrooms] = useState('');
   const [maxBedrooms, setMaxBedrooms] = useState('');
   const [postcode, setPostcode] = useState('');
-  const [dateAddedMode, setDateAddedMode] = useState<"after" | "between">("after");
-  const [dateAfter, setDateAfter] = useState<Date | null>(null);
-  const [dateStart, setDateStart] = useState<Date | null>(null);
-  const [dateEnd, setDateEnd] = useState<Date | null>(null);
+  const [dateAddedMode, setDateAddedMode] = useState("after");
+  const [dateAfter, setDateAfter] = useState(null);
+  const [dateStart, setDateStart] = useState(null);
+  const [dateEnd, setDateEnd] = useState(null);
 
   useEffect(() => {
     const loadProperties = async () => {
@@ -35,10 +34,10 @@ const SearchPage: React.FC = () => {
     loadProperties();
   }, []);
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e) => {
     e.preventDefault();
 
-    const criteria: SearchCriteria = {
+    const criteria = {
       type,
       minPrice: minPrice ? Number(minPrice) : undefined,
       maxPrice: maxPrice ? Number(maxPrice) : undefined,
@@ -69,15 +68,15 @@ const SearchPage: React.FC = () => {
   // Favourites
   const { favourites, addToFavourites, removeFromFavourites, clearFavourites, isFavourite } = useFavourites();
 
-  const handleDragStart = (e: React.DragEvent, property: Property) => {
+  const handleDragStart = (e, property) => {
     e.dataTransfer.setData("propertyId", property.id);
   };
 
-  const handleDragOver = (e: React.DragEvent) => {
+  const handleDragOver = (e) => {
     e.preventDefault(); // Allow drop
   };
 
-  const handleDrop = async (e: React.DragEvent) => {
+  const handleDrop = async (e) => {
     e.preventDefault();
     const propertyId = e.dataTransfer.getData("propertyId");
     const property = properties.find(p => p.id === propertyId);
@@ -135,7 +134,7 @@ const SearchPage: React.FC = () => {
 
           <div className="form-group">
             <label>Date Added</label>
-            <select value={dateAddedMode} onChange={(e) => setDateAddedMode(e.target.value as any)} className="form-control mb-2">
+            <select value={dateAddedMode} onChange={(e) => setDateAddedMode(e.target.value)} className="form-control mb-2">
               <option value="after">After Date</option>
               <option value="between">Between Dates</option>
             </select>

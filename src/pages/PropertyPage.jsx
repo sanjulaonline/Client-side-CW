@@ -3,17 +3,16 @@ import { useParams, Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { fetchPropertyById } from '../services/propertyService';
-import { Property } from '../types/Property';
 import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign, FaHeart } from 'react-icons/fa';
 import './PropertyPage.css';
 import '../index.css';
 import { useFavourites } from '../context/FavouritesContext';
 
-const PropertyPage: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const [property, setProperty] = useState<Property | undefined>(undefined);
+const PropertyPage = () => {
+    const { id } = useParams();
+    const [property, setProperty] = useState(undefined);
     const [loading, setLoading] = useState(true);
-    const [activeImage, setActiveImage] = useState<string>('');
+    const [activeImage, setActiveImage] = useState('');
 
     useEffect(() => {
         const loadProperty = async () => {

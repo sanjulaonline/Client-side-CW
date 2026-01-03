@@ -1,15 +1,21 @@
 [
     {
-        "id": "prop-1",
+        "id": "prop1",
         "type": "House",
-        "price": 450000,
+        "price": 750000,
         "bedrooms": 3,
-        "dateAdded": "2023-10-15",
-        "postcode": "BR1",
-        "location": "Bromley, London",
+        "tenure": "Freehold",
+        "added": {
+            "month": "October",
+            "day": 12,
+            "year": 2022
+        },
+        "postcode": "BR5",
+        "location": "Petts Wood Road, Petts Wood, Orpington BR5",
         "picture": "/images/house1.jpg",
-        "description": "A charming 3-bed detached house with a large garden.",
-        "longDescription": "This beautiful detached home features a spacious living room, modern kitchen, and a large rear garden perfect for families. Located in a quiet cul-de-sac in Bromley, close to local amenities and schools. The property includes a garage and driveway parking.",
+        "description": "Attractive three bedroom semi-detached family home...",
+        "longDescription": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+        "url": "properties/prop1.html",
         "images": [
             "/images/house1.jpg",
             "/images/house1-1.jpg",
@@ -22,16 +28,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-2",
+        "id": "prop2",
         "type": "Flat",
         "price": 325000,
         "bedrooms": 2,
-        "dateAdded": "2023-11-02",
+        "tenure": "Leasehold",
+        "added": {
+            "month": "November",
+            "day": 2,
+            "year": 2023
+        },
         "postcode": "NW1",
         "location": "Camden, London",
         "picture": "/images/flat1.jpg",
         "description": "Modern 2-bed apartment near Camden Town.",
         "longDescription": "Stylish 2-bedroom flat in the heart of Camden. Features an open-plan living area, balcony with city views, and access to a communal roof terrace. Excellent transport links via Camden Town Underground station.",
+        "url": "properties/prop2.html",
         "images": [
             "/images/flat1.jpg",
             "/images/flat1-1.jpg",
@@ -44,16 +56,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-3",
+        "id": "prop3",
         "type": "House",
         "price": 650000,
         "bedrooms": 4,
-        "dateAdded": "2023-09-20",
+        "tenure": "Freehold",
+        "added": {
+            "month": "September",
+            "day": 20,
+            "year": 2023
+        },
         "postcode": "BR1",
         "location": "Bromley, London",
         "picture": "/images/house2.jpg",
         "description": "Spacious 4-bed Victorian terrace freshly renovated.",
         "longDescription": "Immaculately presented Victorian terrace house offering 4 double bedrooms, 2 bathrooms, and a stunning extended kitchen-diner. High ceilings and period features throughout. Conveniently located for Bromley South station.",
+        "url": "properties/prop3.html",
         "images": [
             "/images/house2.jpg",
             "/images/house2-1.jpg",
@@ -66,16 +84,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-4",
+        "id": "prop4",
         "type": "Flat",
         "price": 275000,
         "bedrooms": 1,
-        "dateAdded": "2023-12-01",
+        "tenure": "Leasehold",
+        "added": {
+            "month": "December",
+            "day": 1,
+            "year": 2023
+        },
         "postcode": "NW1",
         "location": "Regents Park, London",
         "picture": "/images/flat2.jpg",
         "description": "Cozy 1-bed flat moments from Regents Park.",
         "longDescription": "A delightful 1-bedroom flat perfect for a first-time buyer or investor. Located on the ground floor of a period conversion, just a short walk from the open spaces of Regent's Park and Baker Street station.",
+        "url": "properties/prop4.html",
         "images": [
             "/images/flat2.jpg",
             "/images/flat2-1.jpg",
@@ -88,16 +112,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-5",
+        "id": "prop5",
         "type": "House",
         "price": 550000,
         "bedrooms": 3,
-        "dateAdded": "2023-10-05",
+        "tenure": "Freehold",
+        "added": {
+            "month": "October",
+            "day": 5,
+            "year": 2023
+        },
         "postcode": "SE1",
         "location": "Bermondsey, London",
         "picture": "/images/house3.jpg",
         "description": "Contemporary 3-bed townhouse with roof terrace.",
         "longDescription": "Modern 3-story townhouse featuring a private garage, open-plan kitchen, and a fantastic roof terrace with views of the Shard. Located in a vibrant area with great restaurants and markets nearby.",
+        "url": "properties/prop5.html",
         "images": [
             "/images/house3.jpg",
             "/images/house3-1.jpg",
@@ -110,16 +140,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-6",
+        "id": "prop6",
         "type": "Flat",
         "price": 425000,
         "bedrooms": 2,
-        "dateAdded": "2023-11-15",
+        "tenure": "Leasehold",
+        "added": {
+            "month": "November",
+            "day": 15,
+            "year": 2023
+        },
         "postcode": "SE1",
         "location": "London Bridge, London",
         "picture": "/images/flat3.jpg",
         "description": "Luxury 2-bed apartment in a new development.",
         "longDescription": "High-spec 2-bedroom apartment with floor-to-ceiling windows, underfloor heating, and 24hr concierge. Residents gym and lounge included. Walking distance to London Bridge station.",
+        "url": "properties/prop6.html",
         "images": [
             "/images/flat3.jpg",
             "/images/flat3-1.jpg",
@@ -132,16 +168,22 @@
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
     },
     {
-        "id": "prop-7",
+        "id": "prop7",
         "type": "House",
         "price": 850000,
         "bedrooms": 5,
-        "dateAdded": "2023-08-30",
+        "tenure": "Freehold",
+        "added": {
+            "month": "August",
+            "day": 30,
+            "year": 2023
+        },
         "postcode": "BR1",
         "location": "Sundridge Park, Bromley",
         "picture": "/images/house4.jpg",
         "description": "Grand 5-bed detached family home with swimming pool.",
         "longDescription": "Exceptional 5-bedroom detached residence set in large landscaped grounds. Features include a heated swimming pool, triple garage, cinema room, and luxury master suite. Premier location near Sundridge Park Golf Club.",
+        "url": "properties/prop7.html",
         "images": [
             "/images/house4.jpg",
             "/images/house4-1.jpg",

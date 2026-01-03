@@ -1,25 +1,24 @@
 import propertiesData from '../data/properties.json';
-import { Property, SearchCriteria } from '../types/Property';
 
 // Simulate async fetch
-export const fetchProperties = async (): Promise<Property[]> => {
+export const fetchProperties = async () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(propertiesData as Property[]);
+            resolve(propertiesData);
         }, 500); // Simulate network delay
     });
 };
 
-export const fetchPropertyById = async (id: string): Promise<Property | undefined> => {
+export const fetchPropertyById = async (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const property = (propertiesData as Property[]).find(p => p.id === id);
+            const property = propertiesData.find(p => p.id === id);
             resolve(property);
         }, 300);
     });
 };
 
-export const filterProperties = (properties: Property[], criteria: SearchCriteria): Property[] => {
+export const filterProperties = (properties, criteria) => {
     return properties.filter(property => {
         // Filter by Type
         if (criteria.type && criteria.type !== 'any' && property.type !== criteria.type) {
@@ -43,7 +42,23 @@ export const filterProperties = (properties: Property[], criteria: SearchCriteri
         }
 
         // Filter by Date Added
-        const propDate = new Date(property.dateAdded);
+        // Convert { month, day, year } to Date object
+        const monthMap = {
+            "January": 0, "February": 1, "March": 2, "April": 3, "May": 4, "June": 5,
+            "July": 6, "August": 7, "September": 8, "October": 9, "November": 10, "December": 11
+        };
+
+        // Check if 'added' field exists, if not try 'dateAdded' for backward compatibility or fail gracefully
+        let propDate;
+        if (property.added && property.added.year) {
+            const month = typeof property.added.month === 'string' ? monthMap[property.added.month] : property.added.month - 1;
+            propDate = new Date(property.added.year, month, property.added.day);
+        } else if (property.dateAdded) {
+            propDate = new Date(property.dateAdded);
+        } else {
+            return false; // Cannot filter by date if no date exists
+        }
+
         if (criteria.dateAfter) {
             if (propDate <= criteria.dateAfter) return false;
         }

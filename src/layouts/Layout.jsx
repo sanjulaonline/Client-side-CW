@@ -3,32 +3,32 @@ import { FaHome, FaHeart } from 'react-icons/fa';
 import '../index.css';
 
 const Layout = () => {
-    return (
-        <div className="layout-container">
-            <header className="main-header">
-                <div className="header-content">
-                    <Link to="/" className="branding">
-                        <FaHome size={32} />
-                        <h1>EstateEase Pro</h1>
-                    </Link>
-                    <nav className="main-nav">
-                        <Link to="/" className="nav-link">Search</Link>
-                        {/* Favourites link will go here later */}
-                    </nav>
-                </div>
-            </header>
+  return (
+    <div className="layout-container">
+      <header className="main-header">
+        <div className="header-content">
+          <Link to="/" className="branding">
+            <FaHome size={32} />
+            <h1>EstateEase Pro</h1>
+          </Link>
+          <nav className="main-nav">
+            <Link to="/" className="nav-link">Search</Link>
+            {/* Favourites link will go here later */}
+          </nav>
+        </div>
+      </header>
 
-            <main className="main-content">
-                <Outlet />
-            </main>
+      <main className="main-content">
+        <Outlet />
+      </main>
 
-            <footer className="main-footer">
-                <p>&copy; 2024 EstateEase Pro. All rights reserved.</p>
-                <p>Advanced Web Development Coursework</p>
-            </footer>
+      <footer className="main-footer">
+        <p>&copy; 2024 EstateEase Pro. All rights reserved.</p>
+        <p>Advanced Web Development Coursework</p>
+      </footer>
 
-            {/* Basic Layout Styles - inline for now, moving to CSS later */}
-            <style>{`
+      {/* Basic Layout Styles - inline for now, moving to CSS later */}
+      <style>{`
         .layout-container {
           display: flex;
           flex-direction: column;
@@ -75,8 +75,8 @@ const Layout = () => {
         }
         .nav-link:hover { text-decoration: underline; }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Layout;

@@ -1,18 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Property } from '../types/Property';
 
-interface FavouritesContextType {
-    favourites: Property[];
-    addToFavourites: (property: Property) => void;
-    removeFromFavourites: (propertyId: string) => void;
-    clearFavourites: () => void;
-    isFavourite: (propertyId: string) => boolean;
-}
+const FavouritesContext = createContext(undefined);
 
-const FavouritesContext = createContext<FavouritesContextType | undefined>(undefined);
-
-export const FavouritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [favourites, setFavourites] = useState<Property[]>(() => {
+export const FavouritesProvider = ({ children }) => {
+    const [favourites, setFavourites] = useState(() => {
         const saved = localStorage.getItem('favourites');
         return saved ? JSON.parse(saved) : [];
     });
@@ -21,14 +12,14 @@ export const FavouritesProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         localStorage.setItem('favourites', JSON.stringify(favourites));
     }, [favourites]);
 
-    const addToFavourites = (property: Property) => {
+    const addToFavourites = (property) => {
         setFavourites(prev => {
             if (prev.some(p => p.id === property.id)) return prev;
             return [...prev, property];
         });
     };
 
-    const removeFromFavourites = (propertyId: string) => {
+    const removeFromFavourites = (propertyId) => {
         setFavourites(prev => prev.filter(p => p.id !== propertyId));
     };
 
@@ -36,7 +27,7 @@ export const FavouritesProvider: React.FC<{ children: React.ReactNode }> = ({ ch
         setFavourites([]);
     };
 
-    const isFavourite = (propertyId: string) => {
+    const isFavourite = (propertyId) => {
         return favourites.some(p => p.id === propertyId);
     };
 

@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
-// Placeholder for pages, we will create them next
 import SearchPage from './pages/SearchPage';
 import PropertyPage from './pages/PropertyPage';
 import { FavouritesProvider } from './context/FavouritesContext';
@@ -21,5 +20,6 @@ function App() {
     </FavouritesProvider>
   );
 }
+
 
 export default App;
