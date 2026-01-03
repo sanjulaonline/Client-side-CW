@@ -1,16 +1,22 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inte', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  /* Light background from screenshot */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #5b45ff;
+  /* Approximate purple from screenshot */
+  --text-dark: #111827;
+  --text-grey: #6b7280;
 }
 
 body {
@@ -19,4 +25,20 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #fcfcfc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', 'Merriweather', serif;
+  /* Serif for "Exclusive" look */
+}
+
+/* Base resets */
+button {
+  font-family: inherit;
 }
