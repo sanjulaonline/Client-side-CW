@@ -7,7 +7,7 @@ import { FavouritesProvider } from './context/FavouritesContext';
 function App() {
   return (
     <FavouritesProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<SearchPage />} />
