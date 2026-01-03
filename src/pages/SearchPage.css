@@ -1,11 +1,40 @@
-.search-page {
+.search-page-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 3rem;
+    background-color: #fcfcfc;
+}
+
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-accent {
+    color: #5b45ff;
+    font-style: italic;
+}
+
+.hero-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.search-page {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    position: relative;
 }
 
 @media (min-width: 1024px) {
@@ -15,6 +44,11 @@
     }
 }
 
+.results-section {
+    flex: 1;
+    width: 100%;
+}
+
 .search-sidebar {
     width: 100%;
     flex-shrink: 0;
@@ -22,29 +56,25 @@
 
 @media (min-width: 1024px) {
     .search-sidebar {
-        width: 320px;
+        width: 300px;
         position: sticky;
         top: 2rem;
     }
-}
-
-.results-section {
-    flex: 1;
-    width: 100%;
 }
 
 .results-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
 .results-header h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e293b;
-    /* slate-800 */
+    color: #111827;
     margin: 0;
 }
 
@@ -72,9 +102,8 @@
     text-align: center;
     padding: 4rem 2rem;
     color: #64748b;
-    /* slate-500 */
     font-size: 1.125rem;
-    background-color: #f8fafc;
+    background-color: white;
     border-radius: 1rem;
     border: 1px dashed #e2e8f0;
 }
@@ -82,15 +111,12 @@
 .clear-btn {
     background: none;
     border: none;
-    color: #ef4444;
-    /* red-500 */
+    color: #6b7280;
     cursor: pointer;
     font-size: 0.875rem;
-    font-weight: 600;
-    text-decoration: underline;
+    font-weight: 400;
 }
 
 .clear-btn:hover {
-    text-decoration: none;
-    color: #dc2626;
+    color: #111827;
 }

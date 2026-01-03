@@ -105,47 +105,59 @@ const SearchPage = () => {
   };
 
   return (
-    <div className="search-page" onDragOver={(e) => e.preventDefault()} onDrop={handleDropOnGrid}>
-      <aside className="search-sidebar">
-        <FavoritesSidebar
-          favorites={favourites}
-          onRemove={removeFromFavourites}
-          onClear={clearFavourites}
-          onDrop={handleDropOnSidebar}
-          onDragStartItem={handleDragStartFromFav}
-        />
-      </aside>
+    <div className="search-page-wrapper">
+      <div className="hero-section">
+        <h1 className="hero-title">
+          EstateEase <span className="hero-accent">Exclusive</span>
+        </h1>
+        <p className="hero-subtitle">
+          Curated premium properties for those who demand excellence. Use the advanced filters below to begin your journey home.
+        </p>
+      </div>
 
-      <section className="results-section">
-        <SearchForm
-          criteria={criteria}
-          setCriteria={setCriteria}
-          onSearch={handleSearch}
-        />
+      <div className="search-page" onDragOver={(e) => e.preventDefault()} onDrop={handleDropOnGrid}>
 
-        <div className="results-header">
-          <h2>Properties ({filteredProperties.length})</h2>
-          <button onClick={handleClearSearch} className="clear-btn">Clear Filters</button>
-        </div>
+        <section className="results-section">
+          <SearchForm
+            criteria={criteria}
+            setCriteria={setCriteria}
+            onSearch={handleSearch}
+          />
 
-        {isLoading ? (
-          <div className="loading">Loading properties...</div>
-        ) : filteredProperties.length === 0 ? (
-          <div className="no-results">No properties found matching your criteria.</div>
-        ) : (
-          <div className="property-grid">
-            {filteredProperties.map(p => (
-              <PropertyCard
-                key={p.id}
-                property={p}
-                isFavorite={isFavourite(p.id)}
-                onToggleFavorite={() => isFavourite(p.id) ? removeFromFavourites(p.id) : addToFavourites(p)}
-                onDragStart={(e) => handleDragStart(e, p)}
-              />
-            ))}
+          <div className="results-header">
+            <h2>Found {filteredProperties.length} Properties</h2>
+            <button onClick={handleClearSearch} className="clear-btn">Sorted by Latest Addition</button>
           </div>
-        )}
-      </section>
+
+          {isLoading ? (
+            <div className="loading">Loading properties...</div>
+          ) : filteredProperties.length === 0 ? (
+            <div className="no-results">No properties found matching your criteria.</div>
+          ) : (
+            <div className="property-grid">
+              {filteredProperties.map(p => (
+                <PropertyCard
+                  key={p.id}
+                  property={p}
+                  isFavorite={isFavourite(p.id)}
+                  onToggleFavorite={() => isFavourite(p.id) ? removeFromFavourites(p.id) : addToFavourites(p)}
+                  onDragStart={(e) => handleDragStart(e, p)}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+
+        <aside className="search-sidebar">
+          <FavoritesSidebar
+            favorites={favourites}
+            onRemove={removeFromFavourites}
+            onClear={clearFavourites}
+            onDrop={handleDropOnSidebar}
+            onDragStartItem={handleDragStartFromFav}
+          />
+        </aside>
+      </div>
     </div>
   );
 };
