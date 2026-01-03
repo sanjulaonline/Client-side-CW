@@ -110,9 +110,10 @@ const PropertyPage: React.FC = () => {
                         </div>
                     </TabPanel>
                 </Tabs>
-            </div>      </div>
-        </div >
+            </div>
+        </div>
     );
 };
 
 export default PropertyPage;
+```

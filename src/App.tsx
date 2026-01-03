@@ -3,19 +3,22 @@ import Layout from './layouts/Layout';
 // Placeholder for pages, we will create them next
 import SearchPage from './pages/SearchPage';
 import PropertyPage from './pages/PropertyPage';
+import { FavouritesProvider } from './context/FavouritesContext';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<SearchPage />} />
-          <Route path="property/:id" element={<PropertyPage />} />
-          {/* Fallback route */}
-          <Route path="*" element={<div>Page Not Found</div>} />
-        </Route>
-      </Routes>
-    </Router>
+    <FavouritesProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<SearchPage />} />
+            <Route path="property/:id" element={<PropertyPage />} />
+            {/* Fallback route */}
+            <Route path="*" element={<div>Page Not Found</div>} />
+          </Route>
+        </Routes>
+      </Router>
+    </FavouritesProvider>
   );
 }
 
