@@ -1,0 +1,156 @@
+[
+    {
+        "id": "prop-1",
+        "type": "House",
+        "price": 450000,
+        "bedrooms": 3,
+        "dateAdded": "2023-10-15",
+        "postcode": "BR1",
+        "location": "Bromley, London",
+        "picture": "/images/house1.jpg",
+        "description": "A charming 3-bed detached house with a large garden.",
+        "longDescription": "This beautiful detached home features a spacious living room, modern kitchen, and a large rear garden perfect for families. Located in a quiet cul-de-sac in Bromley, close to local amenities and schools. The property includes a garage and driveway parking.",
+        "images": [
+            "/images/house1.jpg",
+            "/images/house1-1.jpg",
+            "/images/house1-2.jpg",
+            "/images/house1-3.jpg",
+            "/images/house1-4.jpg",
+            "/images/house1-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan1.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-2",
+        "type": "Flat",
+        "price": 325000,
+        "bedrooms": 2,
+        "dateAdded": "2023-11-02",
+        "postcode": "NW1",
+        "location": "Camden, London",
+        "picture": "/images/flat1.jpg",
+        "description": "Modern 2-bed apartment near Camden Town.",
+        "longDescription": "Stylish 2-bedroom flat in the heart of Camden. Features an open-plan living area, balcony with city views, and access to a communal roof terrace. Excellent transport links via Camden Town Underground station.",
+        "images": [
+            "/images/flat1.jpg",
+            "/images/flat1-1.jpg",
+            "/images/flat1-2.jpg",
+            "/images/flat1-3.jpg",
+            "/images/flat1-4.jpg",
+            "/images/flat1-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan2.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-3",
+        "type": "House",
+        "price": 650000,
+        "bedrooms": 4,
+        "dateAdded": "2023-09-20",
+        "postcode": "BR1",
+        "location": "Bromley, London",
+        "picture": "/images/house2.jpg",
+        "description": "Spacious 4-bed Victorian terrace freshly renovated.",
+        "longDescription": "Immaculately presented Victorian terrace house offering 4 double bedrooms, 2 bathrooms, and a stunning extended kitchen-diner. High ceilings and period features throughout. Conveniently located for Bromley South station.",
+        "images": [
+            "/images/house2.jpg",
+            "/images/house2-1.jpg",
+            "/images/house2-2.jpg",
+            "/images/house2-3.jpg",
+            "/images/house2-4.jpg",
+            "/images/house2-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan3.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-4",
+        "type": "Flat",
+        "price": 275000,
+        "bedrooms": 1,
+        "dateAdded": "2023-12-01",
+        "postcode": "NW1",
+        "location": "Regents Park, London",
+        "picture": "/images/flat2.jpg",
+        "description": "Cozy 1-bed flat moments from Regents Park.",
+        "longDescription": "A delightful 1-bedroom flat perfect for a first-time buyer or investor. Located on the ground floor of a period conversion, just a short walk from the open spaces of Regent's Park and Baker Street station.",
+        "images": [
+            "/images/flat2.jpg",
+            "/images/flat2-1.jpg",
+            "/images/flat2-2.jpg",
+            "/images/flat2-3.jpg",
+            "/images/flat2-4.jpg",
+            "/images/flat2-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan4.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-5",
+        "type": "House",
+        "price": 550000,
+        "bedrooms": 3,
+        "dateAdded": "2023-10-05",
+        "postcode": "SE1",
+        "location": "Bermondsey, London",
+        "picture": "/images/house3.jpg",
+        "description": "Contemporary 3-bed townhouse with roof terrace.",
+        "longDescription": "Modern 3-story townhouse featuring a private garage, open-plan kitchen, and a fantastic roof terrace with views of the Shard. Located in a vibrant area with great restaurants and markets nearby.",
+        "images": [
+            "/images/house3.jpg",
+            "/images/house3-1.jpg",
+            "/images/house3-2.jpg",
+            "/images/house3-3.jpg",
+            "/images/house3-4.jpg",
+            "/images/house3-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan5.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-6",
+        "type": "Flat",
+        "price": 425000,
+        "bedrooms": 2,
+        "dateAdded": "2023-11-15",
+        "postcode": "SE1",
+        "location": "London Bridge, London",
+        "picture": "/images/flat3.jpg",
+        "description": "Luxury 2-bed apartment in a new development.",
+        "longDescription": "High-spec 2-bedroom apartment with floor-to-ceiling windows, underfloor heating, and 24hr concierge. Residents gym and lounge included. Walking distance to London Bridge station.",
+        "images": [
+            "/images/flat3.jpg",
+            "/images/flat3-1.jpg",
+            "/images/flat3-2.jpg",
+            "/images/flat3-3.jpg",
+            "/images/flat3-4.jpg",
+            "/images/flat3-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan6.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    },
+    {
+        "id": "prop-7",
+        "type": "House",
+        "price": 850000,
+        "bedrooms": 5,
+        "dateAdded": "2023-08-30",
+        "postcode": "BR1",
+        "location": "Sundridge Park, Bromley",
+        "picture": "/images/house4.jpg",
+        "description": "Grand 5-bed detached family home with swimming pool.",
+        "longDescription": "Exceptional 5-bedroom detached residence set in large landscaped grounds. Features include a heated swimming pool, triple garage, cinema room, and luxury master suite. Premier location near Sundridge Park Golf Club.",
+        "images": [
+            "/images/house4.jpg",
+            "/images/house4-1.jpg",
+            "/images/house4-2.jpg",
+            "/images/house4-3.jpg",
+            "/images/house4-4.jpg",
+            "/images/house4-5.jpg"
+        ],
+        "floorPlan": "/images/floorplan7.jpg",
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+    }
+]

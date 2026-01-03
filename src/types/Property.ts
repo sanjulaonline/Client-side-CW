@@ -1,22 +1,17 @@
-export interface PropertyDate {
-    year: number;
-    month: string;
-    day: number;
-}
-
 export interface Property {
     id: string;
-    type: string;
-    bedrooms: number;
+    type: "House" | "Flat";
     price: number;
-    tenure: string;
-    description: string;
-    longDescription?: string;
+    bedrooms: number;
+    dateAdded: string; // ISO Date string
+    postcode: string;
     location: string;
-    picture: string;
-    images: string[];
-    added: PropertyDate;
-    url?: string;
+    picture: string; // Main image
+    description: string;
+    longDescription: string;
+    images: string[]; // Gallery images
+    floorPlan: string;
+    mapEmbedUrl: string; // Google Maps embed URL
 }
 
 export interface SearchCriteria {
@@ -25,7 +20,10 @@ export interface SearchCriteria {
     maxPrice?: number;
     minBedrooms?: number;
     maxBedrooms?: number;
-    dateAfter?: Date;
-    dateBetween?: { start: Date; end: Date };
     postcode?: string;
+    dateAfter?: Date;
+    dateBetween?: {
+        start: Date;
+        end: Date;
+    };
 }
