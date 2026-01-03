@@ -24,7 +24,6 @@
 
 .logo-icon {
     background-color: #4f46e5;
-    /* The purple icon bg */
     color: white;
     padding: 0.35rem;
     border-radius: 8px;
@@ -35,7 +34,6 @@
 
 .brand-text {
     font-family: 'Inter', sans-serif;
-    /* The logo text in screenshot is sans-serif, unlike the hero */
     font-weight: 700;
     font-size: 1.125rem;
     color: #111827;

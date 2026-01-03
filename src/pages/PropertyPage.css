@@ -9,7 +9,6 @@
     align-items: center;
     gap: 0.5rem;
     color: #64748b;
-    /* slate-500 */
     text-decoration: none;
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -18,7 +17,6 @@
 
 .back-link:hover {
     color: #4f46e5;
-    /* indigo-600 */
 }
 
 .property-header-section {
@@ -33,7 +31,6 @@
     font-size: 2rem;
     font-weight: 800;
     color: #1e293b;
-    /* slate-800 */
     margin: 0 0 0.5rem 0;
     line-height: 1.2;
 }
@@ -42,7 +39,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: #4f46e5;
-    /* indigo-600 */
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -58,18 +54,14 @@
     cursor: pointer;
     transition: all 0.2s;
     border: 1px solid #e2e8f0;
-    /* slate-200 */
     background-color: white;
     color: #64748b;
-    /* slate-500 */
     white-space: nowrap;
 }
 
 .fav-action-btn:hover {
     background-color: #f8fafc;
-    /* slate-50 */
     color: #ef4444;
-    /* red-500 */
     border-color: #ef4444;
 }
 
@@ -89,11 +81,9 @@
     gap: 2rem;
     padding: 1.5rem;
     background-color: #f8fafc;
-    /* slate-50 */
     border-radius: 1rem;
     margin-bottom: 2rem;
     border: 1px solid #f1f5f9;
-    /* slate-100 */
 }
 
 .property-info-bar span {
@@ -102,7 +92,6 @@
     gap: 0.5rem;
     font-weight: 600;
     color: #334155;
-    /* slate-700 */
 }
 
 .property-description-section {
@@ -113,13 +102,11 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: #1e293b;
-    /* slate-800 */
     margin-bottom: 1rem;
 }
 
 .property-description-section p {
     color: #475569;
-    /* slate-600 */
     line-height: 1.75;
 }
 

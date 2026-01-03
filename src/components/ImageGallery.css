@@ -61,7 +61,6 @@
     width: 1.5rem;
     height: 1.5rem;
     color: #1e293b;
-    /* slate-800 */
 }
 
 .thumbnail-grid {
@@ -94,7 +93,6 @@
 
 .thumbnail-button.active {
     border-color: #4f46e5;
-    /* indigo-600 */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transform: scale(0.95);
 }
@@ -137,7 +135,6 @@
 
 .close-modal-button:hover {
     color: #f87171;
-    /* red-400 */
 }
 
 .close-icon {
