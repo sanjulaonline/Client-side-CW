@@ -116,4 +116,3 @@ const PropertyPage: React.FC = () => {
 };
 
 export default PropertyPage;
-```
