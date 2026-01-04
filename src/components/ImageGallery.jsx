@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './ImageGallery.css';
 
 const ImageGallery = ({ images }) => {
+  const processedImages = images.map(img =>
+    img.startsWith('/') ? import.meta.env.BASE_URL + img.substring(1) : img
+  );
   const [activeIndex, setActiveIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -12,7 +15,7 @@ const ImageGallery = ({ images }) => {
     <div className="gallery-container">
       <div className="main-image-wrapper">
         <img
-          src={images[activeIndex]}
+          src={processedImages[activeIndex]}
           alt={`Property image ${activeIndex + 1}`}
           className="main-image-display"
           onClick={() => setIsFullscreen(true)}
@@ -32,7 +35,7 @@ const ImageGallery = ({ images }) => {
       </div>
 
       <div className="thumbnail-grid">
-        {images.map((img, idx) => (
+        {processedImages.map((img, idx) => (
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
@@ -51,7 +54,7 @@ const ImageGallery = ({ images }) => {
           >
             <svg className="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
-          <img src={images[activeIndex]} className="fullscreen-image" alt="Fullscreen view" />
+          <img src={processedImages[activeIndex]} className="fullscreen-image" alt="Fullscreen view" />
         </div>
       )}
     </div>

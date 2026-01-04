@@ -12,7 +12,7 @@ const PropertyCard = ({ property, isFavorite, onToggleFavorite, onDragStart }) =
       <Link to={`/${property.url}`} className="property-card-link">
         <div className="property-image-container">
           <img
-            src={property.images[0]}
+            src={import.meta.env.BASE_URL + property.images[0].substring(1)}
             alt={property.location}
             className="property-image"
           />

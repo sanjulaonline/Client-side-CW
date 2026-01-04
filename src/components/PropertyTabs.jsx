@@ -36,7 +36,7 @@ const PropertyTabs = ({ property }) => {
         {activeTab === 'floor' && (
           <div className="floor-plan-container">
             <img
-              src={property.floorPlan}
+              src={property.floorPlan.startsWith('/') ? import.meta.env.BASE_URL + property.floorPlan.substring(1) : property.floorPlan}
               alt="Floor Plan"
               className="floor-plan-image"
             />
