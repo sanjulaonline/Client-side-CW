@@ -1,7 +1,14 @@
 .property-details-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1.5rem;
+    /* Reduced padding for mobile */
+}
+
+@media (min-width: 768px) {
+    .property-details-container {
+        padding: 2rem;
+    }
 }
 
 .back-link {
@@ -13,6 +20,7 @@
     font-weight: 500;
     margin-bottom: 1.5rem;
     transition: color 0.2s;
+    font-size: 0.9rem;
 }
 
 .back-link:hover {
@@ -21,18 +29,35 @@
 
 .property-header-section {
     display: flex;
+    flex-direction: column;
+    /* Stack on mobile */
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 2rem;
     gap: 1rem;
 }
 
+@media (min-width: 768px) {
+    .property-header-section {
+        flex-direction: row;
+        align-items: center;
+        /* Center vertically on desktop */
+    }
+}
+
 .header-left h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    /* Mobile font size */
     font-weight: 800;
     color: #1e293b;
     margin: 0 0 0.5rem 0;
     line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .header-left h1 {
+        font-size: 2.25rem;
+    }
 }
 
 .property-price-tag {
@@ -57,6 +82,15 @@
     background-color: white;
     color: #64748b;
     white-space: nowrap;
+    width: 100%;
+    /* Full width on mobile */
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .fav-action-btn {
+        width: auto;
+    }
 }
 
 .fav-action-btn:hover {
@@ -76,14 +110,25 @@
 }
 
 .property-info-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    /* Grid allows better wrapping than flex wrapping sometimes */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cols on mobile */
+    gap: 1rem;
     padding: 1.5rem;
     background-color: #f8fafc;
     border-radius: 1rem;
     margin-bottom: 2rem;
     border: 1px solid #f1f5f9;
+}
+
+@media (min-width: 640px) {
+    .property-info-bar {
+        display: flex;
+        flex-wrap: wrap;
+        /* Back to flex on larger */
+        gap: 2rem;
+    }
 }
 
 .property-info-bar span {
@@ -92,6 +137,7 @@
     gap: 0.5rem;
     font-weight: 600;
     color: #334155;
+    font-size: 0.9rem;
 }
 
 .property-description-section {
@@ -108,18 +154,9 @@
 .property-description-section p {
     color: #475569;
     line-height: 1.75;
+    font-size: 1rem;
 }
 
 .tabs-section {
     margin-bottom: 3rem;
-}
-
-@media (max-width: 768px) {
-    .property-header-section {
-        flex-direction: column;
-    }
-
-    .header-left h1 {
-        font-size: 1.5rem;
-    }
 }

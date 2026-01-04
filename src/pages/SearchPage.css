@@ -1,21 +1,43 @@
 .search-page-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 3rem;
+    padding: 1.5rem;
+    /* Reduced padding for mobile */
     background-color: #fcfcfc;
+}
+
+@media (min-width: 768px) {
+    .search-page-wrapper {
+        padding: 2rem 3rem;
+    }
 }
 
 .hero-section {
     margin-bottom: 2rem;
+    text-align: center;
+    /* Center hero on mobile */
+}
+
+@media (min-width: 1024px) {
+    .hero-section {
+        text-align: left;
+    }
 }
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    /* Smaller font on mobile */
     color: #1a1a1a;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
     line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
 }
 
 .hero-accent {
@@ -27,8 +49,15 @@
     color: #6b7280;
     font-size: 1rem;
     max-width: 600px;
-    margin: 0;
+    margin: 0 auto;
+    /* Center on mobile */
     line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+    .hero-subtitle {
+        margin: 0;
+    }
 }
 
 .search-page {
@@ -51,23 +80,37 @@
 
 .search-sidebar {
     width: 100%;
-    flex-shrink: 0;
+    order: 2;
+    /* Move sidebar to bottom on mobile */
 }
 
 @media (min-width: 1024px) {
     .search-sidebar {
         width: 300px;
+        flex-shrink: 0;
         position: sticky;
         top: 2rem;
+        order: 2;
+        /* Sidebar is logically second, but visually right */
     }
 }
 
+/* Ensure results header wraps on small screens */
 .results-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
     margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+    .results-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .results-header h2 {
@@ -81,18 +124,28 @@
 .property-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    /* 1 col mobile */
+    gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .property-grid {
         grid-template-columns: repeat(2, 1fr);
+        /* 2 cols tablet */
+    }
+}
+
+@media (min-width: 1024px) {
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cols large tablet/small desktop - sidebar takes space */
     }
 }
 
 @media (min-width: 1280px) {
     .property-grid {
         grid-template-columns: repeat(3, 1fr);
+        /* 3 cols large desktop */
     }
 }
 
