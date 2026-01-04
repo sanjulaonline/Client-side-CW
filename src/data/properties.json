@@ -15,7 +15,7 @@
         "picture": "/images/house1.jpg",
         "description": "Attractive three bedroom semi-detached family home...",
         "longDescription": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
-        "url": "properties/prop1.html",
+        "url": "properties/prop1",
         "images": [
             "/images/house1.jpg",
             "/images/house1-1.jpg",
@@ -43,7 +43,7 @@
         "picture": "/images/flat1.jpg",
         "description": "Modern 2-bed apartment near Camden Town.",
         "longDescription": "Stylish 2-bedroom flat in the heart of Camden. Features an open-plan living area, balcony with city views, and access to a communal roof terrace. Excellent transport links via Camden Town Underground station.",
-        "url": "properties/prop2.html",
+        "url": "properties/prop2",
         "images": [
             "/images/flat1.jpg",
             "/images/flat1-1.jpg",
@@ -71,7 +71,7 @@
         "picture": "/images/house2.jpg",
         "description": "Spacious 4-bed Victorian terrace freshly renovated.",
         "longDescription": "Immaculately presented Victorian terrace house offering 4 double bedrooms, 2 bathrooms, and a stunning extended kitchen-diner. High ceilings and period features throughout. Conveniently located for Bromley South station.",
-        "url": "properties/prop3.html",
+        "url": "properties/prop3",
         "images": [
             "/images/house2.jpg",
             "/images/house2-1.jpg",
@@ -99,7 +99,7 @@
         "picture": "/images/flat2.jpg",
         "description": "Cozy 1-bed flat moments from Regents Park.",
         "longDescription": "A delightful 1-bedroom flat perfect for a first-time buyer or investor. Located on the ground floor of a period conversion, just a short walk from the open spaces of Regent's Park and Baker Street station.",
-        "url": "properties/prop4.html",
+        "url": "properties/prop4",
         "images": [
             "/images/flat2.jpg",
             "/images/flat2-1.jpg",
@@ -155,7 +155,7 @@
         "picture": "/images/flat3.jpg",
         "description": "Luxury 2-bed apartment in a new development.",
         "longDescription": "High-spec 2-bedroom apartment with floor-to-ceiling windows, underfloor heating, and 24hr concierge. Residents gym and lounge included. Walking distance to London Bridge station.",
-        "url": "properties/prop6.html",
+        "url": "properties/prop6",
         "images": [
             "/images/flat3.jpg",
             "/images/flat3-1.jpg",
@@ -183,7 +183,7 @@
         "picture": "/images/house4.jpg",
         "description": "Grand 5-bed detached family home with swimming pool.",
         "longDescription": "Exceptional 5-bedroom detached residence set in large landscaped grounds. Features include a heated swimming pool, triple garage, cinema room, and luxury master suite. Premier location near Sundridge Park Golf Club.",
-        "url": "properties/prop7.html",
+        "url": "properties/prop7",
         "images": [
             "/images/house4.jpg",
             "/images/house4-1.jpg",

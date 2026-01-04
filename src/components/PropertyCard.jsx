@@ -9,7 +9,7 @@ const PropertyCard = ({ property, isFavorite, onToggleFavorite, onDragStart }) =
       onDragStart={onDragStart}
       className="property-card"
     >
-      <Link to={`/property/${property.id}`} className="property-card-link">
+      <Link to={`/${property.url}`} className="property-card-link">
         <div className="property-image-container">
           <img
             src={property.images[0]}

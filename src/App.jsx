@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<SearchPage />} />
-            <Route path="property/:id" element={<PropertyPage />} />
+            <Route path="properties/:id" element={<PropertyPage />} />
             {/* Fallback route */}
             <Route path="*" element={<div>Page Not Found</div>} />
           </Route>
