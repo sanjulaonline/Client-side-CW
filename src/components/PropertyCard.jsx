@@ -24,7 +24,7 @@ const PropertyCard = ({ property, isFavorite, onToggleFavorite, onDragStart }) =
         <div className="property-content">
           <div className="property-header">
             <h3 className="property-location">{property.location}</h3>
-            <span className="property-price">£{property.price.toLocaleString()}</span>
+            <span className="property-price">LKR {property.price.toLocaleString()}</span>
           </div>
           <p className="property-description">{property.description}</p>
           <div className="property-meta">

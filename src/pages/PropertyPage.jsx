@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { fetchPropertyById } from '../services/propertyService';
-import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaPoundSign, FaHeart } from 'react-icons/fa';
+import { FaArrowLeft, FaMapMarkerAlt, FaBed, FaHeart } from 'react-icons/fa';
 import ImageGallery from '../components/ImageGallery';
 import PropertyTabs from '../components/PropertyTabs';
 import { useFavourites } from '../context/FavouritesContext';
@@ -42,7 +42,7 @@ const PropertyPage = () => {
                 <div className="header-left">
                     <h1>{property.location} - {property.type}</h1>
                     <div className="property-price-tag">
-                        <FaPoundSign /> {property.price.toLocaleString()}
+                        LKR {property.price.toLocaleString()}
                     </div>
                 </div>
                 <button

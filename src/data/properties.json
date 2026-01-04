@@ -2,7 +2,7 @@
     {
         "id": "prop1",
         "type": "House",
-        "price": 750000,
+        "price": 75000000,
         "bedrooms": 3,
         "tenure": "Freehold",
         "added": {
@@ -10,12 +10,14 @@
             "day": 12,
             "year": 2022
         },
-        "postcode": "BR5",
-        "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+        "postcode": "10120",
+        "location": "Battaramulla, Colombo",
         "picture": "/images/house1.jpg",
-        "description": "Attractive three bedroom semi-detached family home...",
-        "longDescription": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+        "description": "Luxury 3-bedroom house in Battaramulla.",
+        "longDescription": "A modern well-designed house situated in a prime residential area in Battaramulla. Close to the Parliament and Waters Edge. The property features a spacious garden, modern pantry, and maid's quarters. Ideal for a family looking for a quiet yet central location.",
         "url": "properties/prop1",
+        "latitude": 6.8980,
+        "longitude": 79.9223,
         "images": [
             "/images/house1.jpg",
             "/images/house1-1.jpg",
@@ -25,12 +27,12 @@
             "/images/house1-5.jpg"
         ],
         "floorPlan": "/images/floorplan1.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.06734796395!2d79.9135!3d6.8980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aaa5555555%3A0x123456789!2sBattaramulla!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop2",
         "type": "Flat",
-        "price": 325000,
+        "price": 45000000,
         "bedrooms": 2,
         "tenure": "Leasehold",
         "added": {
@@ -38,12 +40,14 @@
             "day": 2,
             "year": 2023
         },
-        "postcode": "NW1",
-        "location": "Camden, London",
+        "postcode": "00300",
+        "location": "Colpetty, Colombo 3",
         "picture": "/images/flat1.jpg",
-        "description": "Modern 2-bed apartment near Camden Town.",
-        "longDescription": "Stylish 2-bedroom flat in the heart of Camden. Features an open-plan living area, balcony with city views, and access to a communal roof terrace. Excellent transport links via Camden Town Underground station.",
+        "description": "Modern 2-bed apartment with sea view.",
+        "longDescription": "Stylish 2-bedroom apartment in the heart of Colombo 3. Features magnificent ocean views, rooftop pool access, and 24-hour security. Walking distance to major shopping malls and hotels.",
         "url": "properties/prop2",
+        "latitude": 6.9147,
+        "longitude": 79.8530,
         "images": [
             "/images/flat1.jpg",
             "/images/flat1-1.jpg",
@@ -53,12 +57,12 @@
             "/images/flat1-5.jpg"
         ],
         "floorPlan": "/images/floorplan2.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.456!2d79.8530!3d6.9147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259123456789%3A0xabcdef!2sColpetty!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop3",
         "type": "House",
-        "price": 650000,
+        "price": 65000000,
         "bedrooms": 4,
         "tenure": "Freehold",
         "added": {
@@ -66,12 +70,14 @@
             "day": 20,
             "year": 2023
         },
-        "postcode": "BR1",
-        "location": "Bromley, London",
+        "postcode": "20000",
+        "location": "Kandy, Central Province",
         "picture": "/images/house2.jpg",
-        "description": "Spacious 4-bed Victorian terrace freshly renovated.",
-        "longDescription": "Immaculately presented Victorian terrace house offering 4 double bedrooms, 2 bathrooms, and a stunning extended kitchen-diner. High ceilings and period features throughout. Conveniently located for Bromley South station.",
+        "description": "Spacious hill country home with scenic views.",
+        "longDescription": "Beautiful 4-bedroom house located in the historic city of Kandy. Surrounded by lush greenery and offering breathtaking mountain views. Close to Gateway College and Kandy City Centre.",
         "url": "properties/prop3",
+        "latitude": 7.2906,
+        "longitude": 80.6337,
         "images": [
             "/images/house2.jpg",
             "/images/house2-1.jpg",
@@ -81,12 +87,12 @@
             "/images/house2-5.jpg"
         ],
         "floorPlan": "/images/floorplan3.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31612.345!2d80.6337!3d7.2906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae366123456789%3A0xabcdef!2sKandy!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop4",
         "type": "Flat",
-        "price": 275000,
+        "price": 35000000,
         "bedrooms": 1,
         "tenure": "Leasehold",
         "added": {
@@ -94,12 +100,14 @@
             "day": 1,
             "year": 2023
         },
-        "postcode": "NW1",
-        "location": "Regents Park, London",
+        "postcode": "10370",
+        "location": "Mount Lavinia, Colombo",
         "picture": "/images/flat2.jpg",
-        "description": "Cozy 1-bed flat moments from Regents Park.",
-        "longDescription": "A delightful 1-bedroom flat perfect for a first-time buyer or investor. Located on the ground floor of a period conversion, just a short walk from the open spaces of Regent's Park and Baker Street station.",
+        "description": "Cozy beachfront apartment.",
+        "longDescription": "Delightful 1-bedroom apartment just steps away from the famous Mount Lavinia beach. Perfect for investment or a holiday home. Surrounded by popular seafood restaurants and hotels.",
         "url": "properties/prop4",
+        "latitude": 6.8306,
+        "longitude": 79.8647,
         "images": [
             "/images/flat2.jpg",
             "/images/flat2-1.jpg",
@@ -109,12 +117,12 @@
             "/images/flat2-5.jpg"
         ],
         "floorPlan": "/images/floorplan4.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15845.678!2d79.8647!3d6.8306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a123456789%3A0xabcdef!2sMount%20Lavinia!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop5",
         "type": "House",
-        "price": 550000,
+        "price": 85000000,
         "bedrooms": 3,
         "tenure": "Freehold",
         "added": {
@@ -122,12 +130,14 @@
             "day": 5,
             "year": 2023
         },
-        "postcode": "SE1",
-        "location": "Bermondsey, London",
+        "postcode": "80000",
+        "location": "Galle Fort, Southern Province",
         "picture": "/images/house3.jpg",
-        "description": "Contemporary 3-bed townhouse with roof terrace.",
-        "longDescription": "Modern 3-story townhouse featuring a private garage, open-plan kitchen, and a fantastic roof terrace with views of the Shard. Located in a vibrant area with great restaurants and markets nearby.",
-        "url": "properties/prop5.html",
+        "description": "Historic villa inside Galle Fort.",
+        "longDescription": "A beautifully restored colonial villa located within the UNESCO World Heritage site of Galle Fort. Features a private courtyard, antique furnishings, and modern amenities. A rare opportunity.",
+        "url": "properties/prop5",
+        "latitude": 6.0535,
+        "longitude": 80.2210,
         "images": [
             "/images/house3.jpg",
             "/images/house3-1.jpg",
@@ -137,12 +147,12 @@
             "/images/house3-5.jpg"
         ],
         "floorPlan": "/images/floorplan5.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15870.123!2d80.2210!3d6.0535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae173123456789%3A0xabcdef!2sGalle%20Fort!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop6",
         "type": "Flat",
-        "price": 425000,
+        "price": 55000000,
         "bedrooms": 2,
         "tenure": "Leasehold",
         "added": {
@@ -150,12 +160,14 @@
             "day": 15,
             "year": 2023
         },
-        "postcode": "SE1",
-        "location": "London Bridge, London",
+        "postcode": "10100",
+        "location": "Rajagiriya, Colombo",
         "picture": "/images/flat3.jpg",
-        "description": "Luxury 2-bed apartment in a new development.",
-        "longDescription": "High-spec 2-bedroom apartment with floor-to-ceiling windows, underfloor heating, and 24hr concierge. Residents gym and lounge included. Walking distance to London Bridge station.",
+        "description": "Luxury apartment in Rajagiriya.",
+        "longDescription": "High-end 2-bedroom apartment in a prestigious vertical living complex. Gym, swimming pool, and club house facilities. Easy access to Colombo city limits.",
         "url": "properties/prop6",
+        "latitude": 6.9090,
+        "longitude": 79.8967,
         "images": [
             "/images/flat3.jpg",
             "/images/flat3-1.jpg",
@@ -165,12 +177,12 @@
             "/images/flat3-5.jpg"
         ],
         "floorPlan": "/images/floorplan6.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.999!2d79.8967!3d6.9090!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259abcdef123%3A0x123456!2sRajagiriya!5e0!3m2!1sen!2slk"
     },
     {
         "id": "prop7",
         "type": "House",
-        "price": 850000,
+        "price": 125000000,
         "bedrooms": 5,
         "tenure": "Freehold",
         "added": {
@@ -178,12 +190,14 @@
             "day": 30,
             "year": 2023
         },
-        "postcode": "BR1",
-        "location": "Sundridge Park, Bromley",
+        "postcode": "22200",
+        "location": "Nuwara Eliya, Central Province",
         "picture": "/images/house4.jpg",
-        "description": "Grand 5-bed detached family home with swimming pool.",
-        "longDescription": "Exceptional 5-bedroom detached residence set in large landscaped grounds. Features include a heated swimming pool, triple garage, cinema room, and luxury master suite. Premier location near Sundridge Park Golf Club.",
+        "description": "Holiday bungalow in Little England.",
+        "longDescription": "Large 5-bedroom holiday bungalow situated in the cool climates of Nuwara Eliya. Overlooking Lake Gregory. Features a fireplace, large garden, and caretaker quarters.",
         "url": "properties/prop7",
+        "latitude": 6.9497,
+        "longitude": 80.7891,
         "images": [
             "/images/house4.jpg",
             "/images/house4-1.jpg",
@@ -193,6 +207,6 @@
             "/images/house4-5.jpg"
         ],
         "floorPlan": "/images/floorplan7.jpg",
-        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=..."
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15838.123!2d80.7891!3d6.9497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380abcdef123%3A0x123456!2sNuwara%20Eliya!5e0!3m2!1sen!2slk"
     }
 ]
